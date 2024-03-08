@@ -6,7 +6,7 @@ import java.util.Scanner;
  public class Main {
     public static void main(String[] args) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("data.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("static/data.txt"));
             StringBuilder content = new StringBuilder();
             String line;
             while ((line = br.readLine()) != null) {
@@ -44,7 +44,7 @@ import java.util.Scanner;
                     System.out.println("Inserisci la chiave per l'algoritmo XOR:");
                     key = scanner.next();
                     String xorDecriptato = CriptoAlgoritmi.xorAlgo(data, key);
-                    String cesareDecriptato = CriptoAlgoritmi.Cesare(xorDecriptato, -1); // Shift negativo per decifrare
+                    String cesareDecriptato = CriptoAlgoritmi.Cesare(xorDecriptato, -1); 
                     FileWriter decriptatoWriter = new FileWriter("data.txt");
                     decriptatoWriter.write(cesareDecriptato);
                     decriptatoWriter.close();

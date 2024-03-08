@@ -8,7 +8,8 @@ public class CriptoAlgoritmi {
         return output.toString();
     }
 
-    static private String xorAlgo(String data, String key) {
+    
+    static protected String xorAlgo(String data, String key) {
         String acc = "";
         for (int i = 0; i < data.length(); i++) {
             char d = data.charAt(i);
